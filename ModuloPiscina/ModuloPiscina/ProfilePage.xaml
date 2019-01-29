@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.ProfilePage"
+             Title= "Mi Perfil" >
+    
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Padding="10, 0">
+                <Grid VerticalOptions="StartAndExpand" HeightRequest="150">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Label FontSize="Medium" TextColor="Black" FontFamily="bold" Grid.Row="0" HorizontalOptions="StartAndExpand" Text="{Binding Nombre1}"></Label>
+                    <Label FontSize="Medium" Grid.Row="0" HorizontalOptions="EndAndExpand" Text="{Binding Apellido1}"></Label>
+                    <Label FontSize="Small" Grid.Row="1" HorizontalOptions="StartAndExpand" Text="{Binding Email1}"></Label>
+                    <Label FontSize="Medium" Grid.Row="1" HorizontalOptions="EndAndExpand" Text="{Binding Tipo_Estudiante}"></Label>
+                    <Label FontSize="Small" Grid.Row="2" HorizontalOptions="StartAndExpand" Text="{Binding FechaNacimiento1}"></Label>
+                    <Label FontSize="Medium" Grid.Row="2" HorizontalOptions="EndAndExpand" Text="{Binding Sexo1}"></Label>
+                    <Label FontSize="Medium" Grid.Row="3" HorizontalOptions="StartAndExpand" Text="{Binding DNI1}"></Label>
+                    <Label FontSize="Medium" Grid.Row="3" HorizontalOptions="EndAndExpand" Text="{Binding Telefono1}"></Label>
+                </Grid>
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="100">
+                <ListView x:Name="listaMisDescuentos" RowHeight="40">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label TextColor="Red" Text="{Binding Num_Usos}" />
+                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                        <Label TextColor="Black" FontSize="10" Text="{Binding Nombre}"  VerticalOptions="StartAndExpand"/>
+                                        <Label TextColor="Black" FontSize="8" Text="{Binding Descripcion}"  VerticalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+
+            <StackLayout VerticalOptions="EndAndExpand">
+                <Grid BackgroundColor="LightGreen" >
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="3*" />
+                        <ColumnDefinition Width="3*" />
+                    </Grid.ColumnDefinitions>
+                    <Button ClassId="codigoBidiEntrada" Grid.Column="0" VerticalOptions="Fill" Text="ENTRAR" HorizontalOptions="Start" Clicked="ProfileButtons" />
+                    <Button ClassId="editarPerfil" Grid.Column="1" VerticalOptions="Fill" Text="EDITAR PERFIL" HorizontalOptions="End" Clicked="ProfileButtons"/>
+                </Grid>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>
