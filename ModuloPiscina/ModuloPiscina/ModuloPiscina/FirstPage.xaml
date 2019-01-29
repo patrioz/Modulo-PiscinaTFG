@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.FirstPage"
+             Title="Página principal">
+
+    <StackLayout>
+
+        <Label FontSize="Large" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="DarkOrange" Text="{Binding Nombre1}" ></Label>
+
+        <Grid BackgroundColor="Coral"  VerticalOptions="FillAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                    <RowDefinition Height="2.5*" />
+                </Grid.RowDefinitions>
+                <Button ClassId="InformacionButton" Grid.RowSpan="5" Grid.Row="0" FontAttributes="Bold" TextColor="Black" Text="INFORMACIÓN"  VerticalOptions="StartAndExpand" HorizontalOptions="Center" Clicked="NavigationBarButtons" />
+                <Button ClassId="ProfileButton" Grid.RowSpan="5" Grid.Row="1" FontAttributes="Bold" TextColor="Black" Text="PERFIL" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" Clicked="NavigationBarButtons"/>
+                <Button ClassId="ChargeBonoButton"  Grid.RowSpan="5" Grid.Row="2" FontAttributes="Bold" TextColor="Black" VerticalOptions="CenterAndExpand" Text="CARGAR BONO" HorizontalOptions="Center" Clicked="NavigationBarButtons" />
+                <Button ClassId="EntrarButton"  Grid.RowSpan="5" Grid.Row="3" FontAttributes="Bold" TextColor="Black" Text="ENTRAR" VerticalOptions="EndAndExpand" HorizontalOptions="Center" Clicked="NavigationBarButtons"/>
+        </Grid>
+    </StackLayout>
+
+</ContentPage>
