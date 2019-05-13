@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.AccesoPerfil"
+             Title="Entradas">
+    <ContentPage.Content>
+   
+        <ListView x:Name="todasEntradas" ItemTapped="EntradaSeleccionada" RowHeight="150">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <ContentView>
+                            <StackLayout>
+                                <Label Text ="{Binding Fecha_Entrada_String}" HorizontalOptions="StartAndExpand" BackgroundColor="#cccccc" TextColor="Black"></Label>
+                                <Grid>
+                                    <Grid.ColumnDefinitions >
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="7*" />
+                                    </Grid.ColumnDefinitions>
+                                    <Image  Grid.Column="0" Source="piscinaucm.jpg" ></Image>
+                                    <StackLayout  Grid.Column="1" >
+                                        <Label Text="{Binding Id_entrada_String}" TextColor="Black"/>
+                                        <Label Text="{Binding Fecha_Fin_String}" TextColor="Black" />
+                                        <Label Text="{Binding Fecha_Uso_String}"  TextColor="Black"/>
+                                        <Label Text="{Binding Tipo_Entrada_String}" TextColor="Black" />
+                                    </StackLayout>
+                                </Grid>
+                            </StackLayout>
+                        </ContentView>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+
+    </ContentPage.Content>
+</ContentPage>

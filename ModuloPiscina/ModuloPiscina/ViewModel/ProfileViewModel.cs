@@ -13,7 +13,7 @@ namespace ModuloPiscina
             this.usuario = user;
         }
 
-        public string Nombre1
+        public string Nombre
         {
 
             get { return usuario.Nombre; }
@@ -28,7 +28,7 @@ namespace ModuloPiscina
             }
         }
 
-        public string Apellido1
+        public string Fecha_ini_nuevo
         {
 
             get { return usuario.Apellidos; }
@@ -43,7 +43,22 @@ namespace ModuloPiscina
             }
         }
 
-        public string Email1
+        public string Apellido
+        {
+
+            get { return usuario.Apellidos; }
+
+            set
+            {
+                if (usuario.Apellidos != value)
+                {
+                    usuario.Apellidos = value;
+                    OnPropertyChanged();
+                }
+            }
+        }
+
+        public string Email
         {
 
             get { return usuario.Email_Preferido; }
@@ -58,7 +73,7 @@ namespace ModuloPiscina
             }
         }
 
-        public string Sexo1
+        public string Sexo
         {
 
             get
@@ -80,7 +95,7 @@ namespace ModuloPiscina
             }*/
         }
 
-        public string FechaNacimiento1
+        public string FechaNacimiento
         {
 
             get { return usuario.Fecha_Nacimiento.ToShortDateString(); }
@@ -95,7 +110,7 @@ namespace ModuloPiscina
             }
         }
 
-        public string DNI1
+        public string DNI
         {
 
             get { return usuario.DNI; }
@@ -114,11 +129,6 @@ namespace ModuloPiscina
                     OnPropertyChanged();
                 }*/
             }
-        }
-
-        public string Tipo_Estudiante
-        {
-            get { return usuario.Tipo_Estudiante; }
         }
     }
 }

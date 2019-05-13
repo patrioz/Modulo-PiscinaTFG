@@ -6,6 +6,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using ZXing.Mobile;
 
 namespace ModuloPiscina.Droid
 {
@@ -19,6 +20,10 @@ namespace ModuloPiscina.Droid
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            ZXing.Net.Mobile.Forms.Android.Platform.Init();
+            Rg.Plugins.Popup.Popup.Init(this, savedInstanceState); 
+            MobileBarcodeScanner.Initialize(this.Application); 
+
             LoadApplication(new App());
         }
     }

@@ -6,18 +6,7 @@ namespace ModuloPiscina
 {
     public class Descuento
     {
-        public Descuento() { }
-
-        public Descuento(int id_descuento, string Nombre, string Descripcion, int cantidad, int Precio, Nullable<int> numUsos, bool unitario, bool acumulable)
-        {
-            this.Id_Descuento = id_descuento;
-            this.Nombre = Nombre;
-            this.Descripcion = Descripcion;
-            this.Cantidad = cantidad;
-            this.Precio = Precio;
-            this.Unitario = unitario;
-            this.Acumulable = Acumulable;
-        }
+       public Descuento() { }
 
         public int Id_Descuento { get; set; }
         public byte Tipo { get; set; }
@@ -36,17 +25,14 @@ namespace ModuloPiscina
         public Nullable<System.DateTime> Fecha_Inicio { get; set; }
         public Nullable<System.DateTime> Fecha_Fin { get; set; }
         public Nullable<int> Caducidad { get; set; }
-        /*public bool Aplica_Reserva { get; set; }
+        public bool Aplica_Reserva { get; set; }
         public bool Aplica_Partido { get; set; }
         public bool Aplica_Escuela { get; set; }
         public bool Aplica_Torneo { get; set; }
         public bool Aplica_Reserva_Recurrente { get; set; }
         public bool Gestiona_PistaVirtual { get; set; }
-        public bool Avisar { get; set; }*/
+        public bool Avisar { get; set; }
         public bool Activo { get; set; }
-
-        
-
 
     }
 }

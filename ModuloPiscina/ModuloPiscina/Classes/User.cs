@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ModuloPiscina.Classes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -6,16 +7,9 @@ namespace ModuloPiscina
 {
     public class User
     {
-        public User()
-        {
-            Descuentos = new List<Descuento>();
-
-        }
-
         public int Id_Usuario { get; set; }
         public string Nombre { get; set; }
         public string Apellidos { get; set; }
-        public string Tipo_Estudiante { get; set; }
         public System.DateTime Fecha_Nacimiento { get; set; }
         public string DNI { get; set; }
         public string Telefono { get; set; }
@@ -34,5 +28,7 @@ namespace ModuloPiscina
         public bool Activo { get; set; }
 
         public virtual List<Descuento> Descuentos { get; set; }
+        public virtual List<Usuario_Gestor> Gestores { get; set; }
+        public virtual List<Entradas> HistoricoEntradas { get; set; }
     }
 }

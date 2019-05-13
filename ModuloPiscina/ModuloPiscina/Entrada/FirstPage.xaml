@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.FirstPage"
+             Title="Página principal">
+
+    <ContentPage.Content>
+        <Grid HorizontalOptions="FillAndExpand">
+            <Grid.RowDefinitions >
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="4*" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Image  Grid.Row="0" IsVisible="True" Source="fotoMainPage.jpg" ></Image>
+            <Label  Grid.Row="1" ClassId="reservar" Text="El acceso a la piscina se hará mediante la aplicación y habiendo reservado previamente el pase. El pase solo se puede  reservar con 24 horas de antelación. Puedes reservar hasta un máximo de tres pases." />
+            <StackLayout Grid.Row="2">
+                <Button ClassId="comprarEntrada" Style="{StaticResource botonStyle2}" Text="Comprar entrada" Clicked="NavigationBarButtons" />
+                <Button ClassId="comprarBono"  Style="{StaticResource botonStyle2}" Text="Comprar bono" Clicked="NavigationBarButtons" />
+                <Button ClassId="misEventos" Style="{StaticResource botonStyle2}" Text="Mis Eventos" Clicked="NavigationBarButtons" />
+            </StackLayout>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

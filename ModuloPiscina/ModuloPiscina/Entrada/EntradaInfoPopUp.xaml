@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                 x:Class="ModuloPiscina.Entrada.EntradaInfoPopUp"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" >
+
+    <StackLayout Margin="12" Padding="9" HeightRequest="250" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" >
+
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Id_entrada_String}" /> 
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Tipo_Entrada_String }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Fecha_Ini_String }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Fecha_Fin_String }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Fecha_Uso_String }" />
+        </StackLayout>
+
+        <StackLayout>
+            <Button x:Name="bidibot" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand" Style="{StaticResource botonStyle1}" Text="CODIGO BIDI" Clicked="PopUpButtons" />
+        </StackLayout>
+        
+    </StackLayout>
+   
+</pages:PopupPage>

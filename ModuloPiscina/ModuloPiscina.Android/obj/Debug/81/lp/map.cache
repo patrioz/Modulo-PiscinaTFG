@@ -1,6 +1,10 @@
 FastAndroidCamera
 FormsViewGroup
 ModuloPiscina
+Plugin.SimpleAudioPlayer.Abstractions
+Plugin.SimpleAudioPlayer
+Rg.Plugins.Popup
+Rg.Plugins.Popup.Droid
 System.Runtime
 Xamarin.Android.Arch.Core.Common
 Xamarin.Android.Arch.Lifecycle.Common
@@ -31,3 +35,4 @@ ZXing.Net.Mobile.Forms
 zxing.portable
 ZXingNetMobile
 netstandard
+System.Reflection.Extensions

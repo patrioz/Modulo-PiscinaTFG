@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.ChargeBono"
+             Title="Comprar Bono">
+    
+    <ContentPage.Content>
+
+        <Grid>
+            <Grid.RowDefinitions >
+                <RowDefinition Height="6*"/>
+                <RowDefinition Height="2.5*" />
+                <RowDefinition Height="1.5*" />
+            </Grid.RowDefinitions>
+
+            <StackLayout Margin="5, 5, 5, 0" Grid.Row="0" >
+                <Label  FontSize="Large" FontFamily="" Text="Tipo de Entrada" TextColor="Black" />
+
+                <Picker x:Name="tipoBono"  FontSize="Large" SelectedIndexChanged="TipoBono_SelectedIndexChanged"
+                                TextColor="Red" Title="Tipo de Entrada" />
+
+                <Label  FontSize="Large" Text="Método de pago" TextColor="Black" />
+
+                <Picker x:Name="tipoPago" SelectedIndexChanged="TipoPago_SelectedIndexChanged" FontSize="Large" 
+                        TextColor="Red" Title="Método de pago"  />
+            </StackLayout>
+
+            <Label Grid.Row="1" x:Name="totalPagar" TextColor="Red" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" FontSize="Large" />
+            
+            <Button Grid.Row="2" x:Name="pagarboton" Style="{StaticResource botonStyle2}" FontAttributes="Bold" Clicked="Pagar" Text="Pagar" VerticalOptions="End" />
+        </Grid>
+
+    </ContentPage.Content>
+</ContentPage>

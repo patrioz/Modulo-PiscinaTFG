@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.ProfilePage"
+             Title= "Perfiles de Usuarios" >
+    
+    <ContentPage.Content>
+
+        <StackLayout VerticalOptions="FillAndExpand" >
+
+            <StackLayout Padding="10,5,0,5" BackgroundColor="#cccccc">
+                <Label Text="USUARIOS DISPONIBLES" />
+            </StackLayout>
+            <ListView x:Name="listaUsuariosDisponibles" RowHeight="60" ItemTapped="UsuarioSeleccionado">
+                <ListView.ItemTemplate >
+                    <DataTemplate >
+                        <ImageCell Height="60" Text="{Binding Nombre}" Detail="{Binding Apellidos}" TextColor ="Black" DetailColor="Gray" ImageSource="profile.png"></ImageCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+                    
+            </ListView>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ModuloPiscina.Entrada.ProfileInfo">
+    <ContentPage.Content>
+
+        <StackLayout>
+            <StackLayout Padding="10, 0" BackgroundColor="LightSteelBlue">
+                <Grid VerticalOptions="StartAndExpand" >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                        <RowDefinition Height="2*" />
+                    </Grid.RowDefinitions>
+
+                    <Label FontSize="Medium" TextColor="Black" FontFamily="bold" Grid.Row="0" HorizontalOptions="StartAndExpand" Text="{Binding Nombre}"></Label>
+                    <Label FontSize="Medium" Grid.Row="0" HorizontalOptions="EndAndExpand" Text="{Binding Apellido}"></Label>
+                    <Label FontSize="Small" Grid.Row="1" HorizontalOptions="StartAndExpand" Text="{Binding Email}"></Label>
+                    <Label FontSize="Medium" Grid.Row="1" HorizontalOptions="EndAndExpand" Text="{Binding Tipo_Estudiante}"></Label>
+                    <Label FontSize="Small" Grid.Row="2" HorizontalOptions="StartAndExpand" Text="{Binding FechaNacimiento}"></Label>
+                    <Label FontSize="Medium" Grid.Row="2" HorizontalOptions="EndAndExpand" Text="{Binding Sexo}"></Label>
+                    <Label FontSize="Medium" Grid.Row="3" HorizontalOptions="StartAndExpand" Text="{Binding DNI}"></Label>
+                    <Label FontSize="Medium" Grid.Row="3" HorizontalOptions="EndAndExpand" Text="{Binding Telefono}"></Label>
+                </Grid>
+            </StackLayout>
+
+
+            <StackLayout VerticalOptions="Fill" BackgroundColor="LightGreen">
+                <ListView x:Name="listaMisDescuentos" RowHeight="70" ItemTapped="DescuentoSeleccionado">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="StartAndExpand">
+                                    <Label VerticalOptions="Center"  Text="{Binding Num_Usos_String}" WidthRequest="10"/>
+                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                        <Label TextColor="Black" Text="{Binding Nombre}"  VerticalOptions="StartAndExpand"/>
+                                        <Label TextColor="Gray" Text="{Binding Fecha_Inicio}"  VerticalOptions="StartAndExpand"/>
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

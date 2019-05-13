@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup" 
+                 x:Class="ModuloPiscina.Entrada.ComprarAbonoPopUp"
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" >
+
+    <StackLayout Margin="12" Padding="24" HeightRequest="250" BackgroundColor="White" HorizontalOptions="Center" VerticalOptions="Center" >
+
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Nombre }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Usos }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Precio }" />
+        </StackLayout>
+        <StackLayout>
+            <Label TextColor="Black" Text="{Binding Descripcion }" />
+        </StackLayout>
+
+        <Button Style="{StaticResource botonStyle2}" Text="OK" Clicked="ok" />
+ 
+    </StackLayout>
+
+</pages:PopupPage>
